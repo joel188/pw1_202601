@@ -1,0 +1,84 @@
+/* Configuración del fondo */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #000;
+    margin: 0;
+}
+
+/* Contenedor del Átomo */
+.atom {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+/* Núcleo */
+.nucleus {
+    width: 25px;
+    height: 25px;
+    background-color: #e94560;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 20px #e94560;
+}
+
+/* Estilo base de órbitas y electrones */
+.orbit {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Línea guía opcional */
+}
+
+.electron {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #4cc9f0;
+    border-radius: 50%;
+    top: 50%;
+    left: 0;
+    margin-top: -5px;
+    box-shadow: 0 0 10px #4cc9f0;
+}
+
+/* Animaciones específicas por órbita */
+.orbit-1 {
+    transform: rotateX(75deg) rotateY(15deg);
+    animation: rotate1 2s linear infinite;
+}
+
+.orbit-2 {
+    transform: rotateX(75deg) rotateY(135deg);
+    animation: rotate2 2s linear infinite;
+    animation-delay: -0.66s;
+}
+
+.orbit-3 {
+    transform: rotateX(75deg) rotateY(255deg);
+    animation: rotate3 2s linear infinite;
+    animation-delay: -1.33s;
+}
+
+/* Keyframes para mantener la inclinación mientras gira */
+@keyframes rotate1 {
+    from { transform: rotateX(75deg) rotateY(15deg) rotateZ(0deg); }
+    to { transform: rotateX(75deg) rotateY(15deg) rotateZ(360deg); }
+}
+
+@keyframes rotate2 {
+    from { transform: rotateX(75deg) rotateY(135deg) rotateZ(0deg); }
+    to { transform: rotateX(75deg) rotateY(135deg) rotateZ(360deg); }
+}
+
+@keyframes rotate3 {
+    from { transform: rotateX(75deg) rotateY(255deg) rotateZ(0deg); }
+    to { transform: rotateX(75deg) rotateY(255deg) rotateZ(360deg); }
+}

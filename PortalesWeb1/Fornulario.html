@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="wi">
+    </head> 
+    <body>
+        <h1>Formulario en html</h1>
+        <form action="formulario.html" method="GET">
+            <label for="txtNombre">Nombre Completo</label>
+            <input type="text" name="txtNombreCompleto" id="txtNombre"/>
+            <!--txtNombreCompleto=valor Ingresado porelusuario-->
+            <label for="intEdad">Edad</label>
+            <input type="number" min="1" max="150" name="intEdad" id="intEdad">
+
+            <label for="colorAzul">Azul</label>
+            <input type="radio" name="colorPreferido" id="colorAzul" value="azul">
+            <label for="colorRojo">Rojo</label>
+            <input type="radio" name="colorPreferido" id="colorRojo" value="rojo">
+            <label for="colorAmarillo">Amarillo</label>
+            <input type="radio" name="colorPreferido" id="colorAmarillo" value="amarillo">
+            <label for="colorVerde">Verde</label>
+            <input type="radio" name="colorPreferido" id="colorVerde" value="verde">
+
+            <fieldset>
+                <legend>Opciones</legend>
+                <label>Opcion 1 <input type="checkbox" value="1" name="opcion1"></label>
+                <label>Opcion 2 <input type="checkbox" value="2" name="opcion2"></label>
+                <label>Opcion 3 <input type="checkbox" value="3" name="opcion3"></label>
+
+            </fieldset>
+        </form>
+    </body>
+</html>

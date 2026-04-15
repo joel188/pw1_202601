@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulario de validacion  de correo</title>
+        <link rel="stylesheet" href="styles/correo.css">
+        <script src="javascript/validarcorreo.js"></script>
+    </head>
+    <body>
+        <main>
+            <h1>Formulario de Validacion</h1>
+            <form action="formvali_correo.html" method="GET">
+                <label for="txtNombre">Nombre</label>
+                <input type="text" name="txtNombreCompleto" id="txtNombre" placeholder="Nombre">
+                <span id="errorNombre" class="error-msg"></span>
+
+                <label for="intEdad">Edad</label>
+                <input type="number" name="intEdad" id="intEdad" placeholder="Edad" />
+                <span id="errorEdad" class="error-msg"></span>
+
+                <label for="txtCorreo">Correo</label>
+                <input type="email" name="txtCorreoElectronico" id="txtCorreo" placeholder="Correo Electronico" />
+                <span id="errorCorreo" class="error-msg"></span>
+                <br><button type="submit">Enviar</button> 
+            </form>
+        </main>
+       
+    </body>
+</html>
